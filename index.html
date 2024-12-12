@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shuyudul Warosatul Anbiya</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 1s ease-out;
+        }
+
+        .hero-bg {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.8), rgba(99, 102, 241, 0.8));
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <div class="min-h-screen flex flex-col">
+        <!-- Navbar -->
+        <nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md shadow-lg">
+            <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+                <div class="text-2xl font-bold text-transparent"
+                    style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.8), rgba(99, 102, 241, 0.8)); background-clip: text; -webkit-background-clip: text;">
+                    Shuwaranby
+                </div>
+
+                <div class="space-x-6">
+                    <a href="#" class="text-blue-900 hover:text-blue-600 transition duration-300">Home</a>
+                    <a href="#" class="text-blue-900 hover:text-blue-600 transition duration-300">About</a>
+                    <a href="#" class="text-blue-900 hover:text-blue-600 transition duration-300">Profile</a>
+                    <a href="#" class="text-blue-900 hover:text-blue-600 transition duration-300">Gallery</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <div class="hero-bg min-h-screen flex items-center justify-center text-white relative overflow-hidden">
+            <div
+                class="container mx-auto px-4 text-center relative z-10 animate-fade-in flex flex-col items-center justify-center">
+                <h1 class="text-5xl font-bold mb-5 text-white mt-10">
+                    Selamat Datang Di Website
+                </h1>
+                <h1 class="text-5xl font-bold mb-6 text-white">
+                    Shuyudul Warosatul Anbiya
+                </h1>
+                <p class="text-xl mb-4 max-w-2xl mx-auto text-white/90 text-justify">
+                    We are alumni of the 2018-2021 class of eighth grade Shuyudul Warosatul Anbiya at the Qoryatul
+                    Qur'an Islamic Boarding School in Sukoharjo. Our education combines general knowledge, Islamic
+                    values, and memorization of the Qur'an. This experience has shaped us into independent and noble
+                    individuals.
+                </p>
+
+
+                <div class="space-x-4 mb-6">
+                    <a href="halaman1.html"
+                        class="bg-white text-blue-800 px-8 py-3 rounded-full hover:bg-blue-100 transition duration-300 inline-block">
+                        Explore More
+                    </a>
+                    <a href="halaman1.html"
+                        class="border-2 border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-blue-800 transition duration-300 inline-block">
+                        Our Story
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Background Shapes -->
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-500/20 rounded-full blur-2xl animate-pulse">
+            </div>
+            <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-purple-500/20 rounded-full blur-2xl animate-pulse">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener('scroll', function () {
+            var reveals = document.querySelectorAll('.reveal');
+            reveals.forEach(function (reveal) {
+                var windowHeight = window.innerHeight;
+                var revealTop = reveal.getBoundingClientRect().top;
+                var revealPoint = 150;
+
+                if (revealTop < windowHeight - revealPoint) {
+                    reveal.classList.add('active');
+                } else {
+                    reveal.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
